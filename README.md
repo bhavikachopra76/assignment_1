@@ -9,6 +9,20 @@ A full-stack, enterprise-grade **Retrieval-Augmented Generation (RAG)** system a
 
 ---
 
+## 🛠️ Tools & Technologies Used
+
+| Component / Task | Tool / Technology Used |
+| :--- | :--- |
+| **PDF & DOCX Parser** | `PyMuPDF` (`pymupdf4llm`) & `python-docx` |
+| **Chunking Strategy** | Heading-Aware Markdown Splitting + `pysbd` Sentence Segmenter |
+| **Embedding** | Google Vertex AI (`text-embedding-005`) |
+| **Vector Database** | Supabase PostgreSQL (`pgvector` Extension) |
+| **Retrieval Strategy** | Hybrid Search (Dense Semantic Vector + Sparse Keyword FTS) |
+| **Reranking** | Cohere Rerank v3.5 (`cohere.ClientV2`) |
+| **Generation** | Google Gemini 2.5 Flash (`gemini-2.5-flash`) |
+
+---
+
 ## 🌟 Highlights & Capabilities
 
 ### 📄 1. Multi-Format Document Ingestion
@@ -55,7 +69,7 @@ assignment_1/
 │   ├── main.py              # FastAPI app routes (/api/documents, /api/chat, /api/dashboard)
 │   ├── config.py            # Centralized settings & Pydantic environment validation
 │   ├── database.py          # Supabase client singleton instance
-│   ├── setup.sql            # SQL schema, pgvector HNSW / GIN indexes, & search RPCs
+│   ├── setup.sql            # SQL schema
 │   ├── schemas.py           # Database-to-JSON API format transformers
 │   ├── extract.py           # Document text extraction (PDF, DOCX, TXT)
 │   ├── chunking.py          # Heading-aware sentence segmenter & chunker
