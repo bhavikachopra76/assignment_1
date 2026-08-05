@@ -47,55 +47,6 @@ A full-stack, enterprise-grade **Retrieval-Augmented Generation (RAG)** system a
 
 ---
 
-## 🏗️ Architecture & Data Flow
-
-```mermaid
-flowchart TD
-    subgraph Frontend ["Frontend (React 18 + Vite + Tailwind CSS)"]
-        UI[Sidebar & Router]
-        CHAT_UI[ChatPage.jsx]
-        DOCS_UI[DocumentsPage.jsx]
-        DASH_UI[DashboardPage.jsx]
-        API_CLIENT[lib/api.js]
-    end
-
-    subgraph Backend ["Backend (FastAPI)"]
-        MAIN[main.py - REST Routing]
-        INGEST[ingest.py - Async Processing]
-        EXTRACT[extract.py - PyMuPDF & python-docx]
-        CHUNK[chunking.py - Heading Splitter & pysbd]
-        EMBED[embeddings.py - Vertex AI Embeddings]
-        RAG[rag.py - Query Rewrite, Search & Gemini]
-    end
-
-    subgraph Database ["Supabase (Postgres & Storage)"]
-        STORAGE[(Supabase Storage Bucket)]
-        DB[(Postgres DB + pgvector + GIN FTS Index)]
-    end
-
-    subgraph CloudAI ["AI Cloud Services"]
-        VERTEX[Google Vertex AI - text-embedding-005 & Gemini 2.5 Flash]
-        COHERE[Cohere Rerank API - rerank-v3.5]
-    end
-
-    UI --> API_CLIENT
-    API_CLIENT -->|HTTP REST| MAIN
-    MAIN -->|Background Task| INGEST
-    INGEST --> STORAGE
-    INGEST --> EXTRACT --> CHUNK --> EMBED
-    EMBED -->|Generate 768d Vectors| VERTEX
-    INGEST -->|Save Chunks & Embeddings| DB
-
-    MAIN -->|Ask Question| RAG
-    RAG -->|1. Rewrite Query| VERTEX
-    RAG -->|2. Vector Search - match_chunks| DB
-    RAG -->|2. Keyword Search - search_chunks| DB
-    RAG -->|3. Rerank Top-K Chunks| COHERE
-    RAG -->|4. Structured Answer + Citations| VERTEX
-```
-
----
-
 ## 📂 Repository File Structure
 
 ```
@@ -137,27 +88,6 @@ assignment_1/
 │
 └── README.md                # Top-level project documentation
 ```
-
----
-
-## 🗄️ Database Schema & SQL Architecture (`setup.sql`)
-
-### Tables
-* **`documents`**: Stores uploaded file records (`id`, `filename`, `file_type`, `size_bytes`, `storage_path`, `pages`, `chunk_count`, `author`, `status`, `stage`, `error`, `uploaded_at`).
-* **`chunks`**: Stores chunked text passages (`id`, `document_id`, `chunk_index`, `content`, `heading`, `page_number`, `embedding vector(768)`, `fts tsvector`).
-* **`chat_sessions`**: Tracks active chat threads (`id`, `title`, `created_at`, `last_active_at`).
-* **`messages`**: Chat turn history (`id`, `session_id`, `role`, `content`, `created_at`).
-* **`queries`**: Performance log (`id`, `session_id`, `question`, `answer`, `latency_ms`, `status`).
-* **`citations`**: Quoted citation records (`id`, `query_id`, `message_id`, `chunk_id`, `document_name`, `page_number`, `heading`, `cited_text`).
-
-### Indexes
-* **HNSW Index**: `create index on chunks using hnsw (embedding vector_cosine_ops);` for fast Approximate Nearest Neighbor vector search.
-* **GIN Index**: `create index on chunks using gin (fts);` for fast PostgreSQL full-text keyword lookup.
-* **Foreign Key Index**: `create index on chunks (document_id);` for instant cascade deletions.
-
-### Stored Procedures (RPCs)
-1. **`match_chunks(query_embedding vector(768), match_count int)`**: Executes Cosine Distance comparison (`1 - (c.embedding <=> query_embedding)`) returning dense semantic search matches.
-2. **`search_chunks(query_text text, match_count int)`**: Executes English stemming and ranking (`ts_rank(c.fts, to_tsquery('english', query_text))`) returning sparse keyword matches.
 
 ---
 
@@ -230,26 +160,5 @@ npm run dev
 ```
 
 The application UI will open at `http://localhost:3000`.
-
----
-
-## 🌐 API Reference Overview
-
-### Documents API
-* `GET /api/documents` — Fetch list of all uploaded documents.
-* `POST /api/documents/upload` — Upload files (PDF/DOCX/TXT) and trigger async background ingestion.
-* `GET /api/documents/{id}/status` — Get live processing stage & status for a document.
-* `DELETE /api/documents/{id}` — Delete document, its storage files, and chunk vectors.
-
-### Chat API
-* `POST /api/chat` — Submit question, execute hybrid RAG search, return answer and citations.
-* `GET /api/chat/sessions` — Fetch recent 20 chat sessions.
-* `GET /api/chat/sessions/{id}/messages` — Retrieve message thread and citations for a session.
-* `DELETE /api/chat/sessions/{id}` — Delete a chat session and associated messages.
-
-### Dashboard Analytics API
-* `GET /api/dashboard/stats` — Aggregate metrics (total docs, total chunks, total questions, average response latency, document growth).
-* `GET /api/dashboard/queries` — Recent query execution log with latency timing.
-* `GET /api/dashboard/responses` — Recent AI responses paired with cited document source labels.
 
 ---
