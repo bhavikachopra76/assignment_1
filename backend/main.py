@@ -5,13 +5,46 @@ from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
+import models
 import schemas
 from config import ALLOWED_TYPES, settings
 from database import supabase
 from ingest import run_ingest
 from rag import answer_question
 
-app = FastAPI()
+DESCRIPTION = """
+REST API for the NexaCore Document Intelligence platform.
+
+Upload PDF, DOCX or TXT policy documents and ask questions about them. Answers are
+generated only from the uploaded documents and every answer carries verbatim citations
+back to the source passage.
+
+**How a question is answered:** the question is embedded and searched two ways at once
+(dense vector similarity and keyword full-text), the combined candidates are reranked by
+Cohere, and the top 5 passages are given to Gemini with a strict instruction to use
+nothing else.
+
+**Uploads are asynchronous.** `POST /api/documents/upload` returns immediately with
+`status: Processing`. Poll `GET /api/documents/{document_id}/status` to follow the
+`stage` field through `reading` → `markdown` → `chunking` → `embedding` → `saving` →
+`done`. The document is queryable once `status` becomes `Indexed`.
+"""
+
+TAGS = [
+    {"name": "Documents", "description": "Upload, list and delete source documents."},
+    {"name": "Chat", "description": "Ask questions and manage chat sessions."},
+    {"name": "Dashboard", "description": "Usage statistics and recent activity."},
+    {"name": "Health", "description": "Service status."},
+]
+
+NOT_FOUND = {404: {"description": "Not found"}}
+
+app = FastAPI(
+    title="NexaCore Document Intelligence API",
+    description=DESCRIPTION,
+    version="1.0.0",
+    openapi_tags=TAGS,
+)
 
 app.add_middleware(
     CORSMiddleware,
@@ -26,19 +59,30 @@ class Question(BaseModel):
     session_id: str | None = None
 
 
-@app.get("/")
+@app.get("/", tags=["Health"], response_model=models.Health, summary="Health check")
 def root():
+    """Confirms the service is running. Used by the host's health check."""
     return {"status": "ok", "docs": "/docs"}
 
 
-@app.get("/api/documents")
+@app.get("/api/documents", tags=["Documents"], response_model=list[models.Document],
+         summary="List all documents")
 def list_documents():
+    """Every uploaded document, newest first, with its ingestion status."""
     rows = supabase.table("documents").select("*").order("uploaded_at", desc=True).execute().data
     return [schemas.document(row) for row in rows]
 
 
-@app.post("/api/documents/upload")
+@app.post("/api/documents/upload", tags=["Documents"], response_model=list[models.Document],
+          summary="Upload one or more documents")
 def upload_documents(background: BackgroundTasks, files: list[UploadFile] = File(...)):
+    """
+    Accepts PDF, DOCX and TXT files.
+
+    Returns as soon as the files are stored, before they are indexed. Each document
+    comes back with `status: Processing` - poll the status endpoint to follow progress.
+    Rejects the whole request with 400 if any file has an unsupported extension.
+    """
     for file in files:
         if file_type_of(file.filename) not in ALLOWED_TYPES:
             raise HTTPException(400, f"{file.filename} must be a PDF, DOCX or TXT file")
@@ -61,13 +105,25 @@ def upload_documents(background: BackgroundTasks, files: list[UploadFile] = File
     return [schemas.document(row) for row in created]
 
 
-@app.get("/api/documents/{document_id}/status")
+@app.get("/api/documents/{document_id}/status", tags=["Documents"],
+         response_model=models.Document, responses=NOT_FOUND,
+         summary="Check ingestion progress")
 def document_status(document_id: str):
+    """
+    Poll this while a document is processing.
+
+    `stage` moves through `reading`, `markdown`, `chunking`, `embedding`, `saving`,
+    `done`. `status` is `Processing`, then `Indexed` on success or `Failed` on error,
+    in which case `error` holds the reason.
+    """
     return schemas.document(get_document(document_id))
 
 
-@app.delete("/api/documents/{document_id}")
+@app.delete("/api/documents/{document_id}", tags=["Documents"],
+            response_model=models.Deleted, responses=NOT_FOUND,
+            summary="Delete a document")
 def delete_document(document_id: str):
+    """Removes the stored files and the database row. Its chunks are deleted too."""
     get_document(document_id)
 
     bucket = supabase.storage.from_(settings.supabase_bucket)
@@ -78,8 +134,21 @@ def delete_document(document_id: str):
     return {"deleted": document_id}
 
 
-@app.post("/api/chat")
+@app.post("/api/chat", tags=["Chat"], response_model=models.ChatReply,
+          responses={400: {"description": "Question was empty"},
+                     503: {"description": "AI service rate limited, retry shortly"}},
+          summary="Ask a question")
 def chat(body: Question):
+    """
+    Answers a question using only the uploaded documents.
+
+    Omit `session_id` to start a new conversation - the reply tells you the id that was
+    created. Pass it back on later questions so follow-ups understand context; the
+    question is rewritten into a standalone one before searching.
+
+    If nothing relevant is found the answer says so rather than guessing, and
+    `citations` comes back empty.
+    """
     question = body.question.strip()
     if not question:
         raise HTTPException(400, "Question cannot be empty")
@@ -120,15 +189,19 @@ def chat(body: Question):
     }
 
 
-@app.get("/api/chat/sessions")
+@app.get("/api/chat/sessions", tags=["Chat"], response_model=list[models.Session],
+         summary="List recent chat sessions")
 def list_sessions():
+    """The 20 most recently active conversations."""
     rows = (supabase.table("chat_sessions").select("*")
             .order("last_active_at", desc=True).limit(20).execute().data)
     return [schemas.session(row) for row in rows]
 
 
-@app.delete("/api/chat/sessions/{session_id}")
+@app.delete("/api/chat/sessions/{session_id}", tags=["Chat"], response_model=models.Deleted,
+            responses=NOT_FOUND, summary="Delete a chat session")
 def delete_session(session_id: str):
+    """Deletes the conversation along with its messages, queries and citations."""
     rows = supabase.table("chat_sessions").select("id").eq("id", session_id).execute().data
     if not rows:
         raise HTTPException(404, "Chat not found")
@@ -137,8 +210,10 @@ def delete_session(session_id: str):
     return {"deleted": session_id}
 
 
-@app.get("/api/chat/sessions/{session_id}/messages")
+@app.get("/api/chat/sessions/{session_id}/messages", tags=["Chat"],
+         response_model=list[models.Message], summary="Get messages in a session")
 def session_messages(session_id: str):
+    """Full history for one conversation in order, with citations attached."""
     rows = (supabase.table("messages").select("*")
             .eq("session_id", session_id).order("created_at").execute().data)
     if not rows:
@@ -154,8 +229,10 @@ def session_messages(session_id: str):
     return [schemas.message(row, by_message.get(row["id"], [])) for row in rows]
 
 
-@app.get("/api/dashboard/stats")
+@app.get("/api/dashboard/stats", tags=["Dashboard"], response_model=models.Stats,
+         summary="Overall usage statistics")
 def dashboard_stats():
+    """Document, chunk and question totals, plus average answer time."""
     documents = supabase.table("documents").select("chunk_count,uploaded_at").execute().data
     queries = supabase.table("queries").select("latency_ms,created_at").execute().data
 
@@ -179,8 +256,10 @@ def dashboard_stats():
     }
 
 
-@app.get("/api/dashboard/queries")
+@app.get("/api/dashboard/queries", tags=["Dashboard"], response_model=list[models.RecentQuery],
+         summary="Recent questions")
 def dashboard_queries():
+    """The last 50 questions asked, with how long each took."""
     rows = recent_queries()
     return [{
         "id": row["id"],
@@ -191,8 +270,10 @@ def dashboard_queries():
     } for row in rows]
 
 
-@app.get("/api/dashboard/responses")
+@app.get("/api/dashboard/responses", tags=["Dashboard"], response_model=list[models.RecentResponse],
+         summary="Recent answers with sources")
 def dashboard_responses():
+    """The last 50 answers, each labelled with the first document it cited."""
     rows = recent_queries()
     if not rows:
         return []

@@ -9,6 +9,26 @@ A full-stack, enterprise-grade **Retrieval-Augmented Generation (RAG)** system a
 
 ---
 
+## 🔗 Live Demo
+
+| | Link |
+| :--- | :--- |
+| **Application** | https://docintel-omega.vercel.app |
+| **API** | https://docintel-7vvc.onrender.com |
+| **Interactive API Docs** | https://docintel-7vvc.onrender.com/docs |
+| **Written API Reference** | [docs/api.md](docs/api.md) |
+
+> **Note on first load:** the API runs on Render's free tier, which spins the server
+> down after 15 minutes of inactivity. The first request after an idle period takes
+> around 50–60 seconds while it wakes up. Every request after that is normal speed.
+
+The frontend is deployed on **Vercel** as a static build, and the backend on **Render**
+as an always-on container. Render was chosen over a serverless host because document
+ingestion continues running in a FastAPI `BackgroundTask` after the upload response is
+sent, and serverless functions are terminated as soon as the response returns.
+
+---
+
 ## 🛠️ Tools & Technologies Used
 
 | Component / Task | Tool / Technology Used |
@@ -87,6 +107,7 @@ assignment_1/
 │   ├── database.py          # Supabase client singleton instance
 │   ├── setup.sql            # SQL schema
 │   ├── schemas.py           # Database-to-JSON API format transformers
+│   ├── models.py            # Pydantic response models for the OpenAPI schema
 │   ├── extract.py           # Document text extraction (PDF, DOCX, TXT)
 │   ├── chunking.py          # Heading-aware sentence segmenter & chunker
 │   ├── embeddings.py       # Google Vertex AI text embedding batches
@@ -116,7 +137,9 @@ assignment_1/
 │   ├── tailwind.config.js   # Custom dark theme configuration
 │   └── vite.config.js       # Vite proxy & build configuration
 │
-├── docs/                    # Rendered architecture diagrams (PNG)
+├── docs/
+│   ├── api.md               # Full REST API reference
+│   └── diagrams/            # Rendered architecture diagrams (PNG)
 ├── ARCHITECTURE.md          # System design, pipelines & data model
 └── README.md                # Top-level project documentation
 ```
