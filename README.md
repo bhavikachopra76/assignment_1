@@ -23,6 +23,22 @@ A full-stack, enterprise-grade **Retrieval-Augmented Generation (RAG)** system a
 
 ---
 
+## 🏗️ Architecture
+
+The system has two pipelines sharing one storage layer. **Ingestion** turns an uploaded file
+into searchable vectors; **querying** answers a question using only those vectors.
+
+![System Overview](docs/diagrams/system-overview.png)
+
+| Diagram | What it shows |
+| :--- | :--- |
+| [System Overview](docs/diagrams/system-overview.png) | How the frontend, API, database and model providers connect |
+| [Ingestion Pipeline](docs/diagrams/ingestion-pipeline.png) | Upload through extraction, chunking, embedding and indexing |
+| [Query Pipeline](docs/diagrams/query-pipeline.png) | Question through hybrid retrieval, reranking and grounded answering |
+| [Data Model](docs/diagrams/data-model.png) | Tables and their cascade-delete relationships |
+
+---
+
 ## 🌟 Highlights & Capabilities
 
 ### 📄 1. Multi-Format Document Ingestion
@@ -100,6 +116,8 @@ assignment_1/
 │   ├── tailwind.config.js   # Custom dark theme configuration
 │   └── vite.config.js       # Vite proxy & build configuration
 │
+├── docs/                    # Rendered architecture diagrams (PNG)
+├── ARCHITECTURE.md          # System design, pipelines & data model
 └── README.md                # Top-level project documentation
 ```
 
