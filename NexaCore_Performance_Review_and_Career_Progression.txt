@@ -1,0 +1,821 @@
+==============================================================================
+             NEXACORE TECHNOLOGIES - PERFORMANCE REVIEW &
+                       CAREER PROGRESSION GUIDE
+==============================================================================
+  Company Name    : NexaCore Technologies
+  Document Name   : Performance Review & Career Progression
+  Document Number : NCT-HR-PRC-002
+  Version         : 2.0
+  Department      : Human Resources
+  Document Owner  : Human Resources - Employee Success (HRBP) Team
+  Approved By     : Ritika Sharma, Chief Human Resources Officer (CHRO)
+  Effective Date  : 01 April 2026
+  Review Date     : 31 March 2027
+  Classification  : Internal - Confidential
+  Audience        : Managers, Employees, Human Resources, Leadership
+  Applies To      : All 4,500 employees across Bengaluru, Patiala, Pune
+                    and Hyderabad
+  Confidentiality : Confidential property of NexaCore Technologies.
+                    Internal use only. Not to be shared outside the
+                    company without the written consent of the CHRO.
+
+0. DOCUMENT CONTROL
+------------------------------------------------------------------------------
+0.1 PURPOSE
+This guide defines how performance is planned, measured, reviewed, rated and
+rewarded at NexaCore Technologies, and how employees progress through grades
+L1 to L6. It exists so that a review at the Northern Regional Hub in Patiala
+follows the same standard as one at the Global Headquarters in Bengaluru, and
+so that an employee can see in writing exactly what the next grade requires.
+For employees it explains how work is assessed; for managers it sets the
+standard for goals, evidence and calibration; for HR and Leadership it keeps
+ratings consistent across 4,500 people and eight departments.
+
+0.2 SCOPE
+Covered: the annual cycle, the rating scale, goal setting, promotion, career
+paths, the Performance Improvement Plan (PIP) and recognition. Not covered:
+compensation terms (appointment letter); leave entitlement (Leave Policy);
+disciplinary procedure (Code of Conduct); recruitment (Employee Handbook).
+Performance management addresses capability and delivery. Conduct matters -
+harassment, dishonesty, policy breach - are handled under the Code of Conduct
+and are never routed through a PIP.
+
+0.3 APPLICABILITY
+  CATEGORY                 GRADES   APPLICABILITY
+  -----------------------  -------  ---------------------------------------
+  Full-Time Employees      L2 - L6  Fully applicable: both cycles, the full
+                                    rating scale, promotion eligibility and
+                                    all recognition programmes.
+  Interns / Trainees       L1       Exceptions apply. An end-of-internship
+                                    assessment replaces the standard cycle.
+                                    Conversion to L2 follows Section 5.8.
+  Consultants/Contractors  C1       Not applicable. Managed by the
+                                    engagement owner (L4+) under contract.
+                                    Not rated and not promotion eligible.
+
+Employees joining partway through a cycle are rated only if they completed at
+least 90 days in role before the rating lock date. Probationers are reviewed
+under Section 5.7. Employees on approved long leave - including the 26 weeks
+of maternity leave under the Leave Policy - are rated on the period actually
+worked; approved leave is never a rating factor.
+
+0.4 DEFINITIONS AND ABBREVIATIONS
+  TERM   MEANING
+  -----  -------------------------------------------------------------
+  HRMS   Human Resources Management System (Workday). System of record
+         for goals, reviews, ratings, promotions and letters.
+  HRBP   HR Business Partner, from the Employee Success team.
+  KPI    Key Performance Indicator. A recurring measure of role health.
+  OKR    Objectives and Key Results. A quarterly outcome framework.
+  PIP    Performance Improvement Plan. A 60-day corrective action plan
+         issued to an employee rated 1 - Unacceptable.
+  IJP    Internal Job Posting. The internal vacancy board in the HRMS.
+  IC     Individual Contributor. An employee with no direct reports.
+  FY     Financial Year. At NexaCore, 1 April to 31 March.
+  CTC    Cost to Company. Total gross salary package.
+
+0.5 RELATED DOCUMENTS
+  DOCUMENT                       CONSULT IT FOR
+  -----------------------------  --------------------------------------
+  Employee Handbook              Grade structure, promotion rules,
+  (NCT-HR-HB-004, v4.0)          review cycles, escalation matrix.
+  Learning & Development         Certification budgets, learning
+  (Employee Handbook, Sec. 8)    platforms, conference sponsorship.
+  Leave Policy                   Leave entitlement and long absence.
+  Code of Conduct                Conduct matters and grievances.
+  HRMS (Workday)                 Goals, self-assessment, ratings,
+                                 promotion records.
+
+SECTION 1 - PERFORMANCE PHILOSOPHY
+------------------------------------------------------------------------------
+1.1 WHY PERFORMANCE REVIEWS EXIST
+NexaCore engineers document intelligence platforms for enterprise clients in
+banking, insurance, healthcare, manufacturing and the public sector. That work
+is long-cycle and collaborative, and its quality is not visible from output
+volume alone. Reviews exist to make an honest, evidenced judgement about
+contribution and convert it into three things the employee can use: clear
+feedback, a development plan, and a fair share of reward and advancement. A
+review is not a ranking exercise or a way of distributing a fixed pool of high
+ratings. NexaCore operates no forced distribution curve; if a whole team
+genuinely exceeds expectations, the whole team may be rated 4.
+
+1.2 CONTINUOUS IMPROVEMENT
+The formal cycle has two review points, but performance management is
+continuous. Managers hold a documented check-in with each team member at least
+monthly, recorded in the HRMS. The purpose is to remove surprises: nothing
+raised for the first time in a March review is fair, and a rating of 1 or 2
+never discussed during the year reflects a failure of management as much as of
+performance. Feedback must be specific, timely and behavioural - what was done
+and what effect it had, not what the person is like.
+
+1.3 CAREER GROWTH
+Every employee sits on a defined ladder from L1 to L6, with a published
+minimum tenure, certification expectation and salary band for each step
+(Section 5.3). Growth is not a reward for waiting. It is granted when an
+employee is already operating at the next grade and the business has a place
+for them to do so.
+
+1.4 BUSINESS ALIGNMENT
+Individual goals cascade from department and company objectives so that
+personal success and company success point the same way. A goal that cannot
+be traced to a department objective is usually a task rather than a goal and
+should be reconsidered at goal setting in April.
+
+1.5 EMPLOYEE DEVELOPMENT
+Development is funded, not merely encouraged. All employees from L1 to L6
+receive enterprise access to Udemy for Business and LinkedIn Learning. The
+annual certification budget is 25,000 rupees for L2 and L3 and 50,000 rupees
+for L4 and above, subject to pre-approval by an L4 or above and relevance to
+the role. Employees at L3 and above are eligible for one company-sponsored
+domestic technology conference each year, approved by Rohan Gupta, VP of
+Engineering. Unused development budget is a management shortfall, not a
+saving.
+
+SECTION 2 - PERFORMANCE REVIEW CYCLE
+------------------------------------------------------------------------------
+2.1 CYCLE OVERVIEW
+NexaCore runs two formal review cycles each financial year, both administered
+in the HRMS. The financial year runs 1 April to 31 March.
+
+  CYCLE            MONTH     PURPOSE AND OUTCOME
+  ---------------  --------  -------------------------------------------
+  Mid-Year Review  October   Developmental focus. No compensation changes
+                             in this cycle. Used to recalibrate goals,
+                             identify development needs, course-correct.
+  Annual Review    March     Performance ratings are locked. Influences
+                             the April increment cycle and the annual
+                             promotion cycle effective 1 April.
+
+2.2 MID-YEAR REVIEW (OCTOBER)
+The Mid-Year Review is developmental: no rating of record, no increment, no
+promotion decision. It confirms that April goals remain relevant, resets goals
+overtaken by changed client or programme priorities, gives the employee an
+unambiguous read on where they stand, and agrees development actions with
+enough of the year left to matter. Managers must give a directional indication
+- below, at, or above expectations. Withholding it because the conversation is
+uncomfortable is not acceptable: an employee heading for a 2 in March has a
+right to know in October. Although this cycle makes no compensation decision,
+variable pay is paid bi-annually in the October and April payroll cycles,
+prorated on individual ratings; the October payment is driven by the previous
+March rating, not by the Mid-Year Review.
+
+2.3 ANNUAL REVIEW (MARCH)
+The Annual Review is the rating of record. It determines the April increment,
+promotion eligibility, and variable pay for the following year. Ratings are
+locked at the end of March and cannot be altered afterwards except through
+the correction route in Section 2.8.
+
+2.4 SELF ASSESSMENT
+Both cycles open with the employee's self assessment in the HRMS. The employee
+reviews each goal, states the outcome achieved, and provides evidence -
+verifiable artefacts such as delivery milestones met, defect and quality
+metrics, client or stakeholder feedback, Confluence documentation, merged pull
+requests in GitHub Enterprise, closed Jira items, certifications completed, or
+colleagues mentored. It is not a negotiation position and should not be
+inflated, since managers usually see the same evidence; nor understated, since
+under-reporting makes it harder to advocate for you in calibration. A missing
+self assessment does not stop the cycle; the manager rates on what is
+available.
+
+2.5 MANAGER REVIEW
+The manager reviews the self assessment, adds their assessment against each
+goal, gathers peer and stakeholder input, and proposes a rating on the 1 to 5
+scale with recorded evidence. A proposed rating without recorded evidence is
+returned by the HRBP. For employees at L3 and above, and for anyone working
+primarily on a client engagement, managers must seek input from at least two
+stakeholders outside their own reporting line.
+
+2.6 CALIBRATION
+Calibration keeps ratings comparable across teams, departments and the four
+office locations; without it, a 4 from a generous manager in Pune would not
+mean the same as a 4 from a demanding manager in Hyderabad. Sessions are
+chaired by an L5 Director with the HRBP present and attended by all L4
+managers in the group. Managers present proposed ratings with evidence, and
+the panel challenges outliers in both directions - unexplained clusters of 4s
+and 5s, and low ratings never raised at Mid-Year. Ratings may move up or down,
+and the manager must be able to explain any change in their own words.
+Calibration applies no forced distribution: it tests whether the evidence
+supports the rating, using one standard for every employee at a grade.
+
+2.7 FINAL RATINGS AND COMMUNICATION
+After calibration, ratings are approved by the HRBP and locked in the HRMS at
+the end of March. The manager communicates the rating in a one-to-one
+conversation, never by email or chat alone, and records the discussion in the
+HRMS. The employee then acknowledges it. Acknowledgement records that the
+rating was received and discussed; it does not signify agreement.
+
+2.8 DISAGREEING WITH A RATING
+An employee may record a written disagreement in the HRMS within 10 working
+days of communication. The HRBP reviews the rating, evidence and calibration
+record and may uphold it or refer it back to the calibration chair; the
+outcome is communicated within 15 working days. Where the employee believes
+the rating reflects bias or retaliation rather than performance, the matter
+escalates to the CHRO, Ritika Sharma, under the Code of Conduct grievance
+route instead.
+
+2.9 ANNUAL TIMELINE
+  PERIOD            ACTIVITY                             OWNER
+  ----------------  -----------------------------------  ----------------
+  April             Goal setting; goals locked in HRMS   Employee/Manager
+  April             Increments and promotions effective  HR / Payroll
+  April payroll     Variable pay on the March rating     Payroll/Benefits
+  Monthly           Documented one-to-one check-ins      Manager
+  Early October     Mid-Year self assessment             Employee
+  Mid October       Mid-Year manager review              Manager
+  Late October      Mid-Year discussion and goal reset   Employee/Manager
+  October payroll   Variable pay on the March rating     Payroll/Benefits
+  Early March       Annual self assessment               Employee
+  Mid March         Manager review and proposed rating   Manager
+  Mid-Late March    Calibration sessions                 L5 chair + HRBP
+  End March         Ratings locked and communicated      HRBP / Manager
+  Within 10 days    Window to record disagreement        Employee
+
+SECTION 3 - PERFORMANCE RATING SCALE
+------------------------------------------------------------------------------
+3.1 THE FIVE-POINT SCALE
+The rating of record is set once a year, in the March Annual Review.
+
+  RATING  LABEL                 CONSEQUENCE
+  ------  --------------------  -----------------------------------------
+  1       Unacceptable          Requires immediate PIP (Performance
+                                Improvement Plan)
+  2       Needs Improvement     Structured development plan; not
+                                promotion eligible
+  3       Meets Expectations    Standard rating; standard increment and
+                                variable pay
+  4       Exceeds Expectations  Promotion eligible
+  5       Outstanding           Exceptional impact; highest increment and
+                                variable pay
+
+3.2 RATING 1 - UNACCEPTABLE
+Performance falls materially and persistently below the requirements of the
+grade. Commitments are missed without early escalation, work needs
+substantial rework, and previous feedback has produced no change. A rating of
+1 requires an immediate PIP, the 60-day plan described in Section 7.
+  Example: An Associate (L2) in QA and Automation has over two quarters
+  signed off test cycles that later failed in staging, missed three
+  regression deadlines without flagging them, and not completed the mandatory
+  Information Security refresher despite four reminders. The issues were
+  raised at Mid-Year and in monthly check-ins with no measurable change. The
+  manager rates 1 and initiates a PIP.
+
+3.3 RATING 2 - NEEDS IMPROVEMENT
+Performance falls short of the grade in one or more significant areas, but the
+shortfall is specific and addressable rather than systemic. The employee
+delivers, but with supervision, rework or delay not expected at their grade. A
+rating of 2 does not trigger a PIP; it requires a documented development plan
+with named actions, owners and review dates, revisited at the next Mid-Year.
+An employee rated 2 is not promotion eligible and typically receives a
+below-standard increment. Two consecutive 2s are reviewed by the manager and
+HRBP to decide whether a PIP is warranted.
+  Example: A Senior Executive (L3) in Backend Engineering delivers features to
+  specification, but design documents consistently arrive after implementation
+  has begun, and two production incidents traced to edge cases missed in his
+  design review. Technical quality is adequate; the shortfall is the design
+  rigour and documentation discipline expected at L3.
+
+3.4 RATING 3 - MEETS EXPECTATIONS
+The standard rating, and the correct rating for a solid, reliable performer.
+The employee consistently delivers what the grade requires, to the expected
+quality, timeline and independence; goals are substantially achieved and
+feedback is acted on. A rating of 3 is not a criticism or a signal of
+stagnation - most NexaCore employees are rated 3 in any year, and they receive
+the standard increment and variable pay. They are not promotion eligible that
+cycle, because promotion requires a minimum rating of 4.
+  Example: An Associate (L2) in Frontend Engineering meets all sprint
+  commitments, keeps code review turnaround within the team standard, responds
+  constructively to feedback, and completed her AWS Developer certification
+  within budget. She has not taken on work beyond assigned scope. Rating: 3.
+
+3.5 RATING 4 - EXCEEDS EXPECTATIONS
+The employee consistently delivers beyond the requirements of the grade -
+typically operating at or near the next grade in one or more dimensions:
+ownership beyond assigned scope, raising the performance of others, resolving
+problems that were not theirs to resolve, or delivering measurable business
+impact. Rating 4 is the minimum for promotion consideration, but a 4 alone
+does not produce a promotion; the tenure, certification and approval
+requirements in Section 5 must also be met.
+  Example: A Senior Executive (L3) in DevOps and Site Reliability identifies
+  that a client-facing service will breach its response-time commitment under
+  projected month-end volume. Rather than wait for the breach he raises it
+  with his L4 manager the same day, proposes two mitigations with effort
+  estimates, documents the analysis on Confluence, and implements the chosen
+    option before the peak. He also mentors two L2 associates through on-call.
+  Rating: 4.
+
+3.6 RATING 5 - OUTSTANDING
+Exceptional impact well beyond the grade, visible at department or company
+level rather than within the immediate team. Rating 5 is reserved for a
+genuinely small number of employees each year and requires specific,
+verifiable evidence presented in calibration.
+  Example: A Manager (L4) in the Document Intelligence Team finds a recurring
+  manual reconciliation step consuming several hours a week across three
+  delivery pods. She designs and delivers an automated approach, documents it
+  on Confluence, drives adoption across all three pods and a fourth in Pune,
+  and the change is later productised into the platform. The saving is
+  measurable, client escalations fall, and two of her team are promoted having
+  been developed by her that year.
+
+3.7 HOW RATINGS AFFECT REWARD
+  RATING  INCREMENT         VARIABLE PAY      PROMOTION ELIGIBLE
+  ------  ----------------  ----------------  ------------------------
+  1       None              None              No - PIP initiated
+  2       Below standard    Reduced           No
+  3       Standard          Standard          No
+  4       Above standard    Above standard    Yes, if Section 5 is met
+  5       Highest           Highest           Yes, if Section 5 is met
+
+Variable pay is paid bi-annually in the October and April payroll cycles,
+prorated on the individual rating. Salary is credited on the last working day
+of every month. Increments from the March rating take effect on 1 April.
+
+SECTION 4 - GOAL SETTING
+------------------------------------------------------------------------------
+4.1 WHEN GOALS ARE SET
+Goals are set in April, at the start of the financial year, and locked in the
+HRMS. They are reviewed at the October Mid-Year Review and may be reset where
+client or programme priorities have changed, or amended mid-cycle by
+agreement, with the change and reason recorded. An employee cannot be rated
+against a goal that was never recorded.
+
+4.2 SMART GOALS
+Every goal must be Specific, Measurable, Achievable, Relevant and Time-bound.
+  Specific    states exactly what will be delivered, not a direction of
+              effort.
+  Measurable  carries a number, a date or a verifiable artefact.
+  Achievable  is realistic for the grade, capacity and dependencies.
+  Relevant    traces to a department or company objective.
+  Time-bound  has a date, not merely "this year".
+
+  Weak goal   : "Improve code quality."
+  SMART goal  : "Reduce escaped defects in the payments module from an
+                 average of 7 per release to 3 or fewer by 31 December,
+                 measured in Jira, by introducing contract tests and a
+                 design review checklist."
+
+4.3 KPIs AND OKRs
+NexaCore uses both frameworks, for different purposes. They are
+complementary, not alternatives.
+
+  ASPECT      KPI                         OKR
+  ----------  --------------------------  -----------------------------
+  Purpose     Ongoing health of the role  A step change or new outcome
+  Horizon     Continuous, reviewed        Quarterly
+              quarterly
+  Target      Expected to be met          Ambitious; 70 percent
+                                          attainment is a good result
+  Example     "Sprint commitment          "Reduce median extraction
+              attainment at or above      latency from 900ms to 400ms
+              85 percent"                 by end of Q3"
+  Rating use  Consistent misses indicate  Judged on outcome and
+              a 2 or below                learning, not on percentage
+
+Because OKRs are deliberately ambitious, missing an OKR target is not by
+itself evidence of underperformance. Managers judge the quality of the
+attempt, the learning captured and the outcome delivered.
+
+4.4 INDIVIDUAL AND TEAM GOALS
+Every employee carries individual goals, measuring their own contribution, and
+team or organisational goals, measuring what their group delivers. The balance
+shifts with grade: an intern is judged almost entirely on their own work, a
+Director largely on what their organisation delivers.
+
+  GRADE   INDIVIDUAL GOALS   TEAM / ORGANISATIONAL GOALS
+  ------  -----------------  ---------------------------
+  L1      80 percent         20 percent
+  L2      70 percent         30 percent
+  L3      70 percent         30 percent
+  L4      50 percent         50 percent
+  L5      30 percent         70 percent
+  L6      20 percent         80 percent
+
+4.5 GOAL WEIGHTAGE
+Each goal carries a weight, and all weights must total 100 percent. Employees
+carry three to six goals: fewer usually means the role is under-described,
+more dilutes focus. No single goal should exceed 40 percent, so one dependency
+failure outside the employee's control cannot determine the whole rating.
+
+  Worked example - Senior Executive (L3), Document Intelligence Team:
+  GOAL                                                        WEIGHT
+  ----------------------------------------------------------  ------
+  Deliver the classification service upgrade to production
+  by 30 September with zero Sev-1 defects in 30 days             35%
+  Reduce median extraction latency from 900ms to 400ms by
+  end of Q3 (OKR)                                                25%
+  Maintain sprint commitment attainment at or above 85
+  percent across the year (KPI)                                  15%
+  Complete CKA certification within the annual budget by
+  31 January                                                     15%
+  Mentor two L2 associates through their first production
+  release, evidenced in the HRMS mentorship record               10%
+  ----------------------------------------------------------  ------
+  TOTAL                                                         100%
+
+SECTION 5 - PROMOTION PROCESS
+------------------------------------------------------------------------------
+5.1 PROMOTION CYCLE
+Promotions run on a single annual cycle, effective 1 April of every financial
+year. There is no off-cycle promotion route: an employee who becomes eligible
+in June waits for the following April.
+
+5.2 ELIGIBILITY - THE THREE CONDITIONS
+All three must be satisfied at the same time.
+  1. TENURE. A minimum of 18 months in the current grade, subject to the
+     grade-specific minimum tenure in Section 5.3.
+  2. PERFORMANCE. A minimum annual rating of 4 - Exceeds Expectations in the
+     March Annual Review.
+  3. APPROVAL. A direct manager recommendation from L4 or above, plus HR
+     Business Partner approval. Promotion to L6 additionally requires Board
+     approval.
+Meeting all three makes an employee eligible for consideration; it does not
+create an entitlement. Promotion also requires that the business has a role at
+the next grade and that the employee already demonstrates capability at it.
+
+5.3 PROMOTION MATRIX, TENURE, CERTIFICATIONS AND SALARY BANDS
+Salary bands are annual base salary in Indian Rupees.
+
+  FROM   TO   MIN TENURE   CERTIFICATIONS (EXAMPLES)    BASE SALARY BAND
+  -----  ---  -----------  ---------------------------  --------------------
+  L1     L2   6 months     AWS Cloud Practitioner       6,00,000 - 9,00,000
+  L2     L3   18 months    AWS Developer / CKA          9,00,000 - 15,00,000
+  L3     L4   24 months    PMP / Scrum Master / CISSP   15,00,000 - 28,00,000
+  L4     L5   36 months    Exec. Leadership Program     28,00,000 - 45,00,000
+  L5     L6   Not appl.    Board Approval Required      45,00,000 and above
+
+  GRADE  TITLE CLASSIFICATION           MANAGEMENT LEVEL
+  -----  -----------------------------  ---------------------------------
+  L1     Intern / Trainee               Individual Contributor
+  L2     Associate / Junior Executive   Individual Contributor
+  L3     Senior Executive / Specialist  Individual Contributor / Team Lead
+  L4     Manager / Principal            Mid-Level Management
+  L5     Director / VP                  Senior Management
+  L6     C-Suite (CEO, CTO, CFO)        Executive Leadership
+
+5.4 REQUIRED CERTIFICATIONS
+Certifications must be recorded in the HRMS to count; a certificate held but
+not uploaded does not count. Costs are reimbursable within the annual budget -
+25,000 rupees for L2 and L3, 50,000 rupees for L4 and above - provided the
+certification is pre-approved by an L4 or above and relevant to the role.
+Certifications claimed without prior approval are not reimbursed, and claims
+go in the HRMS within 30 days. The certifications named are examples of the
+standard expected, not an exhaustive list; an equivalent of comparable rigour
+may be accepted with HRBP agreement recorded in the HRMS.
+
+5.5 THE PROMOTION APPROVAL PATH
+  STEP  ACTIVITY                                       OWNER
+  ----  ---------------------------------------------  -----------------
+  1     Confirm tenure, rating and certifications      Employee/Manager
+  2     Prepare the promotion case with evidence of    Manager (L4+)
+        work already at the next grade
+  3     Submit the recommendation in the HRMS during   Manager (L4+)
+        the March cycle
+  4     Review in departmental calibration and         L5 Director +
+        promotion panel                                HRBP
+  5     HR Business Partner approval                   HRBP
+  6     Leadership approval for L5; Board approval     L6 Executive or
+        for L6                                         Board
+  7     Promotion and revised salary communicated      Manager and HRBP
+  8     Promotion effective                            1 April
+
+5.6 SALARY REVISION ON PROMOTION
+A promotion moves the employee into the base salary band of the new grade
+(Section 5.3), effective 1 April with the annual increment cycle. Placement
+within the band reflects experience, the calibrated rating and position
+relative to peers at that grade. An employee already paid above the floor of
+the new band still receives an increase; a promotion never results in a nil
+revision. Provident Fund at 12 percent of basic salary, gratuity accrual and
+insurance cover adjust automatically.
+
+5.7 PROMOTION AND PROBATION
+Full-Time Employees serve a six-month probation. Time on probation counts
+towards grade tenure, but an employee must be confirmed before a promotion
+recommendation can be submitted. Employees on probation are not rated on the
+standard scale; they are assessed through the 30-day, 90-day and 150-day
+probation check-ins described in the Employee Handbook.
+
+5.8 INTERN CONVERSION (L1 TO L2)
+Interns are not promoted through the standard cycle. Conversion from L1 to L2
+requires a minimum of 6 months in the internship, a positive end-of-internship
+assessment, an available L2 role, and HRBP approval. AWS Cloud Practitioner is
+the example certification standard. Converted interns begin a fresh six-month
+probation and enter the L2 salary band.
+
+5.9 CROSS-REFERENCE
+The promotion rules here restate those published in the Employee Handbook
+(NCT-HR-HB-004, version 4.0), Section 3.10. Where any difference arises, the
+Employee Handbook prevails.
+
+SECTION 6 - CAREER GROWTH
+------------------------------------------------------------------------------
+6.1 TWO CAREER PATHS
+From grade L3 onwards NexaCore offers two parallel paths of equal standing.
+An employee is not required to manage people in order to advance.
+
+  GRADE  TECHNICAL / IC PATH             MANAGEMENT PATH
+  -----  ------------------------------  -------------------------------
+  L2     Associate                       Associate
+  L3     Senior Executive / Specialist   Senior Executive / Team Lead
+  L4     Principal                       Manager
+  L5     Distinguished / VP (technical)  Director / VP
+  L6     C-Suite (for example CTO)       C-Suite
+
+Both paths carry the same grade, salary band and promotion requirements: a
+Principal at L4 and a Manager at L4 are peers. Employees may move between
+paths at a grade boundary with manager and HRBP agreement; moving from Manager
+to
+Principal is not a demotion and is not recorded as one.
+
+6.2 WHAT CHANGES AS GRADE INCREASES
+  L1  Learns the environment; delivers defined tasks with close guidance.
+  L2  Delivers assigned work independently within an established pattern.
+  L3  Owns a component or workstream end to end; sets technical direction
+      within it; mentors L1 and L2 colleagues.
+  L4  Owns a team or technical domain; accountable for outcome, not only
+      output; develops others; approves domestic travel and expenses.
+  L5  Owns a department or major programme; sets direction and budget;
+      approves international travel; chairs calibration.
+  L6  Owns company-level strategy and results.
+
+6.3 LEARNING
+All employees from L1 to L6 receive enterprise access to Udemy for Business
+and LinkedIn Learning through the internal portal. Certification is funded
+within the budget in Section 5.4. Employees at L3 and above are eligible for
+one company-sponsored domestic technology conference each year, such as AWS
+Summit or Google Cloud Next, approved by Rohan Gupta, VP of Engineering.
+Attendees share their learning through a Confluence write-up or an internal
+session. Full details are in the Employee Handbook, Section 8.
+
+6.4 MENTORSHIP
+Employees at L2 and L3 are matched with a mentor at L4 or above from outside
+their reporting line, so mentoring stays separate from evaluation. Interns at
+L1 get a mentor at L3 or L4 alongside their reporting manager, and every new
+joiner is assigned a buddy on Day 1. Pairings are recorded in the HRMS and
+reviewed every six months. Mentoring others is legitimate review evidence and
+is frequently part of the case for promotion to L4.
+
+6.5 LEADERSHIP PROGRAMMES
+The Executive Leadership Program is the named development expectation for
+promotion from L4 to L5. It is nominated by an L5 Director, approved by the
+HRBP, and covers organisational leadership, financial literacy, strategic
+planning and people development. A first-time managers programme is offered
+to employees moving from L3 to L4 on the management path, covering goal
+setting, evidence, calibration and difficult conversations.
+
+6.6 INTERNAL MOBILITY AND INTERNAL JOB POSTING
+NexaCore fills roles internally wherever possible. All open positions are
+published on the Internal Job Posting board in the HRMS before or alongside
+external advertising.
+
+  IJP ELIGIBILITY REQUIREMENT   STANDARD
+  ----------------------------  ----------------------------------------
+  Probation                     Must be completed
+  Time in current role          Minimum 12 months
+  Performance rating            Meets Expectations (3) or above
+  Confidentiality               Confidential until the interview stage,
+                                when the current manager is informed
+
+6.7 CROSS-FUNCTIONAL TRANSFERS
+A cross-functional transfer moves an employee between departments or
+functional groups - for example from QA and Automation into the AI Platform
+and Machine Learning team - at the same grade. Transfers require agreement
+from the releasing manager, the receiving manager and the HRBP, raised in the
+HRMS. A same-grade transfer does not reset grade tenure for promotion, but the
+receiving manager may require a settling period of up to three months before
+submitting a recommendation. Goals are reset on transfer, and the year's
+rating is agreed jointly by both managers, weighted by time in each role.
+Where the transfer involves company-requested relocation of more than 100
+kilometres, the Expense and Reimbursement Policy relocation limits apply.
+
+SECTION 7 - PERFORMANCE IMPROVEMENT PLAN (PIP)
+------------------------------------------------------------------------------
+7.1 WHEN A PIP STARTS
+A PIP is initiated when an employee receives a rating of 1 - Unacceptable in
+the Annual Review. It may also be initiated mid-cycle where performance has
+deteriorated materially and documented feedback has produced no improvement;
+mid-cycle initiation requires HRBP approval. A PIP is a performance instrument
+only - conduct matters go through the Code of Conduct, never a PIP.
+
+7.2 DURATION
+A PIP runs for 60 days from the date it is signed and acknowledged in the
+HRMS. The duration is fixed. It may be paused only for approved long leave -
+for example certified sick leave or maternity leave - and resumes for the
+remaining days on return.
+
+7.3 WHAT A PIP MUST CONTAIN
+  - The specific performance gaps, described behaviourally with dated
+    examples and reference to previous feedback.
+  - Measurable improvement objectives with defined success criteria.
+  - The support the company will provide: training, mentoring, reallocation
+    of work, or closer supervision.
+  - A weekly review schedule with dates.
+  - A clear statement of the consequence of not meeting the objectives.
+A PIP that lists complaints without measurable objectives and defined support
+is invalid and will be returned by the HRBP.
+
+7.4 MANAGER RESPONSIBILITIES
+The manager drafts the PIP with the HRBP, holds the initial conversation in
+person, meets the employee weekly, documents each review in the HRMS, provides
+the promised support, and gives an honest interim indication at the 30-day
+midpoint. A manager who does not hold the weekly reviews cannot rely on the
+outcome; incomplete documentation invalidates the process.
+
+7.5 EMPLOYEE EXPECTATIONS
+The employee acknowledges the PIP in the HRMS, attends every weekly review,
+works to meet the objectives, asks for clarification or support early, and
+raises obstacles promptly. Employees may bring their HRBP into any PIP
+discussion. A PIP is confidential between the employee, the manager, the HRBP
+and the approving L5.
+
+7.6 SUCCESSFUL COMPLETION
+Where the objectives are met, the PIP is closed successfully in the HRMS and
+the employee returns to normal performance management. A closed PIP does not
+carry forward as a permanent mark: the employee is rated normally next year
+and can be rated 3, 4 or 5 on that year's evidence. It does affect promotion
+timing - a rating of 4 or above in a subsequent Annual Review is required
+before a promotion recommendation can be submitted.
+
+7.7 FAILURE OUTCOMES
+Where the objectives are not met, the manager and HRBP review the evidence and
+one of three outcomes follows: an extension of up to 30 days where there is
+clear partial progress; redeployment at the same grade where the mismatch is
+role fit rather than capability; or separation, with the applicable notice
+period served - 60 days for Full-Time Employees at L2 and above. Separation
+requires HRBP approval and L5 endorsement.
+
+SECTION 8 - RECOGNITION PROGRAMMES
+------------------------------------------------------------------------------
+8.1 PURPOSE AND PROGRAMME SUMMARY
+Formal ratings occur once a year, but recognition should not wait for March.
+NexaCore operates recognition programmes so contribution is acknowledged
+close to the point at which it happens.
+
+  PROGRAMME                  FREQUENCY   NOMINATED BY     APPROVED BY
+  -------------------------  ----------  ---------------  --------------
+  Spot Award                 Any time    Any employee     L4 Manager
+  Employee of the Month      Monthly     Peers/managers   L4 + HRBP
+  Innovation Award           Quarterly   Manager or peer  L5 Director
+  Customer Excellence Award  Quarterly   Customer Success L5 Director
+                                         or the client
+  Long Service Award         Milestone   Automatic(HRMS)  HR
+  Annual Recognition         Annual      L4 and above     L6 Leadership
+
+8.2 SPOT AWARDS
+Spot Awards recognise a specific act close to the moment: covering for a
+colleague at short notice, an out-of-hours recovery, or documentation that
+saved others time. Any employee may nominate any other, across departments and
+grades, in the HRMS, approved by an L4 manager. They carry a modest monetary
+value paid through payroll and are deliberately quick to award.
+
+8.3 EMPLOYEE OF THE MONTH
+Awarded monthly in each functional group on peer and manager nominations,
+approved jointly by the L4 manager and the HRBP. The citation names the
+specific contribution. Employees at L1 and C1 are eligible for nomination
+alongside Full-Time Employees.
+
+8.4 INNOVATION AWARDS
+Awarded quarterly for a demonstrable improvement in how NexaCore builds or
+operates - an automation that removes recurring manual effort, a reusable
+platform capability, or a measurable performance gain. Evidence of adoption
+beyond the originating team is expected. Approved by an L5 Director. Reflects
+the Agile Innovation value.
+
+8.5 CUSTOMER EXCELLENCE AWARD
+Awarded quarterly for outstanding client outcomes, nominated by the Customer
+Success team or directly by a client and approved by an L5 Director.
+Nominations must cite the client, the situation and the outcome. This
+programme reflects the Customer Centricity value.
+
+8.6 LONG SERVICE AWARDS
+Generated automatically by the HRMS at the 3, 5, 10 and 15-year milestones of
+continuous service. The 5-year milestone is also the point at which gratuity
+becomes payable, calculated at 15 days of basic salary for every completed
+year of service.
+
+8.7 ANNUAL RECOGNITION
+Held after the March cycle closes, recognising company-level contribution
+across engineering excellence, delivery, client impact, people leadership and
+living the NexaCore values. Nominated by managers at L4 and above, approved by
+L6 Leadership. Recognition is separate from ratings and variable pay: an award
+does not by itself change a rating, and a rating of 3 does not disqualify an
+employee from any programme.
+
+SECTION 9 - FREQUENTLY ASKED QUESTIONS
+------------------------------------------------------------------------------
+Q1. When am I eligible for promotion?
+When all three conditions are met at once: a minimum of 18 months in your
+current grade, a minimum annual rating of 4 - Exceeds Expectations, and a
+manager recommendation from L4 or above plus HRBP approval. Grade-specific
+minimum tenure is in Section 5.3.
+
+Q2. How is my performance measured?
+Against the goals locked in the HRMS in April, using evidence. Individual and
+team goals are weighted by grade (Section 4.4), each goal carries a weight
+totalling 100 percent, and the rating is set in the March Annual Review after
+calibration.
+
+Q3. Can I disagree with my rating?
+Yes. Record a written disagreement in the HRMS within 10 working days. Your
+HRBP reviews the rating, evidence and calibration record and responds within
+15 working days. If you believe the rating reflects bias or retaliation,
+escalate to the CHRO, Ritika Sharma, under the Code of Conduct instead.
+
+Q4. Who approves promotions?
+Your direct manager (L4 or above) recommends and the HRBP approves. Promotion
+to L5 requires L6 leadership approval; promotion to L6 requires Board
+approval.
+
+Q5. How long must I stay in my current grade before promotion?
+6 months from L1 to L2, 18 months from L2 to L3, 24 months from L3 to L4, and
+36 months from L4 to L5. Promotion to L6 has no fixed tenure and requires
+Board approval.
+
+Q6. What certifications help with promotion?
+The published examples are AWS Cloud Practitioner (L1 to L2); AWS Developer
+or CKA (L2 to L3); PMP, Scrum Master or CISSP (L3 to L4); and the Executive
+Leadership Program (L4 to L5). It must be recorded in the HRMS to count.
+
+Q7. Will the company pay for my certification?
+Yes, within the annual budget - 25,000 rupees for L2 and L3, 50,000 rupees
+for L4 and above - provided it is pre-approved by an L4 or above and relevant
+to your role. Claims go in the HRMS within 30 days of the expense.
+
+Q8. Can interns receive promotions?
+Not through the standard cycle. Conversion from L1 to L2 requires a minimum
+of 6 months in the internship, a positive end-of-internship assessment, an
+available L2 role and HRBP approval (Section 5.8).
+
+Q9. Are contractors rated and promoted?
+No. Contractors at C1 are managed by the engagement owner under their
+contract of engagement. They are not rated on the NexaCore scale and are not
+promotion eligible.
+
+Q10. How do salary revisions work?
+Increments from the March rating take effect on 1 April. On promotion you
+move into the base salary band of your new grade (Section 5.3), also
+effective 1 April. A promotion never results in a nil revision.
+
+Q11. When is variable pay paid?
+Bi-annually, in the October and April payroll cycles, prorated on your
+individual rating. The October payment is driven by the previous March
+rating, not by the Mid-Year Review.
+
+Q12. I was rated 3. Am I underperforming?
+No. Rating 3 - Meets Expectations is the standard rating for a solid,
+reliable performer, and most employees are rated 3 in a given year. It does
+mean you are not promotion eligible that cycle, since promotion requires a 4.
+
+Q13. Does NexaCore use a forced distribution or bell curve?
+No. Calibration tests whether the evidence supports the proposed rating,
+using the same standard for everyone at a grade. If a whole team genuinely
+exceeds expectations, the whole team may be rated 4.
+
+Q14. What happens if I am placed on a PIP?
+It runs 60 days from signature, with weekly documented reviews and a 30-day
+interim indication. If you meet the objectives it closes successfully and
+does not carry forward as a permanent mark, though you will need a rating of
+4 or above in a later Annual Review before a promotion recommendation.
+
+Q15. What happens if I do not meet my PIP objectives?
+One of three outcomes: an extension of up to 30 days where there is clear
+partial progress; redeployment at the same grade where the issue is role fit;
+or separation with the applicable notice period, which is 60 days for
+Full-Time Employees at L2 and above. Separation requires HRBP approval and L5
+endorsement.
+
+Q16. Can I change departments?
+Yes, through the Internal Job Posting board in the HRMS. You must have
+completed probation, spent at least 12 months in your current role, and hold
+a rating of Meets Expectations (3) or above. Applications are confidential
+until the interview stage.
+
+Q17. Do I have to become a manager to progress?
+No. From L3 onwards the technical and management paths run in parallel with
+the same grades, salary bands and promotion requirements. A Principal at L4
+and a Manager at L4 are peers, and moving between paths is not a demotion.
+
+Q18. How does long leave affect my rating?
+It does not disadvantage you. Your rating is based on the period actually
+worked, and absence on approved leave - including the 26 weeks of maternity
+leave under the Leave Policy - is never a rating factor. A PIP in progress is
+paused for approved long leave and resumes on return.
+
+Q19. What if my goals became irrelevant during the year?
+Raise it with your manager. Goals may be reset at the October Mid-Year Review
+or amended by agreement at any time, with the change and reason recorded in
+the HRMS. You cannot be rated against a goal that was never recorded.
+
+Q20. My manager never raised a concern until March. Is that acceptable?
+No. Managers must hold documented monthly check-ins and give a directional
+indication at Mid-Year. A low rating raised for the first time in March is a
+management failure. Say so in your written disagreement under Section 2.8 and
+raise it with your HR Business Partner.
+
+==============================================================================
+END OF DOCUMENT
+NexaCore Technologies - Performance Review & Career Progression
+Document Number NCT-HR-PRC-002, Version 2.0, Effective 01 April 2026
+Owner: Human Resources - Employee Success (HRBP) Team
+Approved By: Ritika Sharma, Chief Human Resources Officer (CHRO)
+(c) 2026 NexaCore Technologies, TechPark One, Bengaluru, Karnataka, India.
+Internal - Confidential.
+==============================================================================
