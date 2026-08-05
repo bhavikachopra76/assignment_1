@@ -26,6 +26,11 @@ class Question(BaseModel):
     session_id: str | None = None
 
 
+@app.get("/")
+def root():
+    return {"status": "ok", "docs": "/docs"}
+
+
 @app.get("/api/documents")
 def list_documents():
     rows = supabase.table("documents").select("*").order("uploaded_at", desc=True).execute().data
