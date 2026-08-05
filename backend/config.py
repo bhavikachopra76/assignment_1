@@ -19,6 +19,7 @@ class Settings(BaseSettings):
     gcp_project: str
     gcp_region: str
     cohere_key: str
+    allowed_origins: str = "http://localhost:3000,http://127.0.0.1:3000"
 
 settings = Settings()
 
