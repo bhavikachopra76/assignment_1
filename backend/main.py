@@ -1,4 +1,5 @@
 import time
+import uuid
 from datetime import datetime, timedelta, timezone
 
 from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
@@ -136,6 +137,7 @@ def delete_document(document_id: str):
 
 @app.post("/api/chat", tags=["Chat"], response_model=models.ChatReply,
           responses={400: {"description": "Question was empty"},
+                     404: {"description": "Chat session does not exist"},
                      503: {"description": "AI service rate limited, retry shortly"}},
           summary="Ask a question")
 def chat(body: Question):
@@ -147,13 +149,18 @@ def chat(body: Question):
     question is rewritten into a standalone one before searching.
 
     If nothing relevant is found the answer says so rather than guessing, and
-    `citations` comes back empty.
+    `citations` comes back empty. A `session_id` that no longer exists gives 404.
     """
     question = body.question.strip()
     if not question:
         raise HTTPException(400, "Question cannot be empty")
 
-    history = recent_history(body.session_id) if body.session_id else ""
+    # Checked before any AI calls - otherwise a deleted session would burn a whole
+    # round of embedding, reranking and generation before failing on the insert.
+    history = ""
+    if body.session_id:
+        get_session(body.session_id)
+        history = recent_history(body.session_id)
 
     started = time.time()
     try:
@@ -202,10 +209,7 @@ def list_sessions():
             responses=NOT_FOUND, summary="Delete a chat session")
 def delete_session(session_id: str):
     """Deletes the conversation along with its messages, queries and citations."""
-    rows = supabase.table("chat_sessions").select("id").eq("id", session_id).execute().data
-    if not rows:
-        raise HTTPException(404, "Chat not found")
-
+    get_session(session_id)
     supabase.table("chat_sessions").delete().eq("id", session_id).execute()
     return {"deleted": session_id}
 
@@ -214,6 +218,9 @@ def delete_session(session_id: str):
          response_model=list[models.Message], summary="Get messages in a session")
 def session_messages(session_id: str):
     """Full history for one conversation in order, with citations attached."""
+    if not valid_uuid(session_id):
+        return []
+
     rows = (supabase.table("messages").select("*")
             .eq("session_id", session_id).order("created_at").execute().data)
     if not rows:
@@ -295,10 +302,32 @@ def dashboard_responses():
 
 
 def get_document(document_id):
+    if not valid_uuid(document_id):
+        raise HTTPException(404, "Document not found")
+
     rows = supabase.table("documents").select("*").eq("id", document_id).execute().data
     if not rows:
         raise HTTPException(404, "Document not found")
     return rows[0]
+
+
+def get_session(session_id):
+    if not valid_uuid(session_id):
+        raise HTTPException(404, "Chat not found")
+
+    rows = supabase.table("chat_sessions").select("id").eq("id", session_id).execute().data
+    if not rows:
+        raise HTTPException(404, "Chat not found")
+    return rows[0]
+
+
+# Postgres rejects an id that is not a uuid, which would come back as a 500.
+def valid_uuid(value):
+    try:
+        uuid.UUID(value)
+        return True
+    except ValueError:
+        return False
 
 
 def file_type_of(filename):

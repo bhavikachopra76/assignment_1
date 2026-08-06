@@ -13,7 +13,8 @@ The Swagger page is executable — you can upload a document and ask a question 
 browser without writing any client code.
 
 > The API is hosted on Render's free tier and spins down after 15 minutes of inactivity.
-> The first request after an idle period takes 50–60 seconds while the server wakes.
+> The first request after an idle period can take up to two minutes while the server
+> wakes, so give it a generous timeout. Every request after that is normal speed.
 
 ---
 
@@ -229,6 +230,8 @@ instructed never to answer from outside knowledge.
 
 **400** — `{ "detail": "Question cannot be empty" }`
 
+**404** — `{ "detail": "Chat not found" }` if `session_id` is given but no longer exists.
+
 **503** — upstream AI rate limit, after internal retries:
 
 ```json
@@ -355,6 +358,10 @@ Every error uses FastAPI's standard shape:
 | `404` | Document or chat session does not exist |
 | `422` | Request body failed validation (missing or wrong-typed field) |
 | `503` | Upstream AI rate limit, after internal retries |
+
+An id that is not a valid UUID is treated as not found rather than as a server error, so
+a malformed `document_id` or `session_id` returns the same `404` shape as one that simply
+does not exist.
 
 Rate limits are retried before surfacing: embedding retries 5 times with 20-second
 waits, generation retries 3 times backing off 10 then 20 seconds. A `503` means those
